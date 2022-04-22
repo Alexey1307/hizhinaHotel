@@ -35,6 +35,7 @@
                 Покатайтесь на лошадях и исследуйте Азишскую пещеру!</p>
     </div>
     <form action="" class="calendarWrapper">
+        @csrf
         <a name="calendar" class="scroll"></a>
         <div class="calendar">
             <div class="item">
