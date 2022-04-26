@@ -22,7 +22,6 @@ class BookingController extends Controller{
         $booking->paymentType = $req->input('paymentType');
         $booking->prepayment = $req->input('prepayment');
         $booking->payment = $req->input('payment');
-        $booking->checkInHotel = $req->input('checkInHotel');
 
         $booking->save();
 

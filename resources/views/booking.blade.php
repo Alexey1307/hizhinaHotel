@@ -48,10 +48,6 @@
         <label for="payment">payment</label><br>
         <input type="text" name="payment" id="payment" placeholder="payment"><br><br>
     </div>
-    <div class="formWrapper">
-        <label for="checkInHotel">checkInHotel</label><br>
-        <input type="text" name="checkInHotel" id="checkInHotel" placeholder="checkInHotel"><br><br>
-    </div>
     
     <button class="bookingSubmit" type="submit">Забронировать</button>
 </form>
