@@ -17,7 +17,7 @@
         <input type="text" name="phone" id="phone" placeholder="Телефон"><br><br>
     </div>
     <div class="formWrapper">
-        <label for="email">Электронная почта</label><br>
+        <label for="email">Электронная почта (при наличии)</label><br>
         <input type="text" name="email" id="email" placeholder="Email"><br><br>
     </div>
     <div class="formWrapper">
@@ -35,10 +35,6 @@
     <div class="formWrapper">
         <label for="guestComments">Коментарий</label><br>
         <input type="text" name="guestComments" id="guestComments" placeholder="Пожелания"><br><br>
-    </div>
-    <div class="formWrapper">
-        <label for="paymentType">Тип оплаты</label><br>
-        <input type="text" name="paymentType" id="paymentType" placeholder="Сдесь надо сделать чекбоксы"><br><br>
     </div>
     <div class="formWrapper">
         <label for="prepayment">prepayment</label><br>

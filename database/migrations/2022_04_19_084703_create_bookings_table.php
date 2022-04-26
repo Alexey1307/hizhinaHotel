@@ -17,18 +17,16 @@ class CreateBookingsTable extends Migration
             $table->id();
             $table->timestamps();
             $table->string('name');
-            $table->integer('phone');
+            $table->string('phone');
             $table->string('email');
 
             $table->date('enterDate');
             $table->date('outDate');
             $table->integer('countRooms');
-            $table->text('guestComments'); // пожелания / коментарии гостя
+            $table->text('guestComments');
 
-            $table->string('paymentType'); // наличка, онлайн
             $table->integer('prepayment'); // предоплата
             $table->integer('payment'); // здесь будет считаться остаток к оплате
-            $table->boolean('checkInHotel'); // статус - заезд / незаезд
         });
     }
 

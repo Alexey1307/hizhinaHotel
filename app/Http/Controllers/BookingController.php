@@ -19,24 +19,11 @@ class BookingController extends Controller{
         $booking->countRooms = $req->input('countRooms');
         $booking->guestComments = $req->input('guestComments');
 
-        $booking->paymentType = $req->input('paymentType');
         $booking->prepayment = $req->input('prepayment');
         $booking->payment = $req->input('payment');
 
         $booking->save();
 
-//Валидация: можно здесь, через метод validate(), в который передается массив.
-//Если здесь, то первый параметр 'Request', а не BookingRequest
-//Но сейчас валидация перенесена в файл BookingRequest
-
-        // $validation = $req->validate([
-        //     'name' => 'required',
-        //     'phone' => 'required|min:11',
-        //     'email' => 'email',
-        //     'outDate' => 'after:enterDate'
-        // ]);
-
-        // return redirect()->route('/messages');
-        // return 'fuck you';
+        return redirect()->route('messages');
     }
 }
