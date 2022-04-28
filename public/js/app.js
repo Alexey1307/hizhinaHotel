@@ -2060,36 +2060,8 @@ module.exports = {
   \*****************************/
 /***/ ((__unused_webpack_module, __unused_webpack_exports, __webpack_require__) => {
 
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); // Календарь
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //swiper
 
-
-document.querySelector('.button').addEventListener('click', function () {
-  var dateStart = document.querySelector('.start_date').value;
-  var dateEnd = document.querySelector('.end_date').value;
-  dateStart = Date.parse(dateStart);
-  dateEnd = Date.parse(dateEnd);
-  var out = document.querySelector('.out');
-  var out_2 = document.querySelector('.out_2');
-  var out_3 = document.querySelector('.out_3');
-  var count = 0;
-  var select = document.querySelector('select').selectedIndex;
-  var selectValue = select + 1; // selectedIndex считается с 0, поэтому +1
-
-  var startDateRender = new Date(dateStart).toLocaleDateString().substring(0, 10);
-  var endDateRender = new Date(dateEnd).toLocaleDateString().substring(0, 10);
-
-  if (startDateRender && endDateRender != 'Invalid Da') {
-    out.innerHTML = startDateRender + ' - ' + endDateRender; //Выводим выбранные даты
-  }
-
-  for (var i = dateStart; i <= dateEnd; i = i + 24 * 60 * 60 * 1000) {
-    count++;
-    var trueCount = count - 1;
-    out_2.innerHTML = "".concat(trueCount); //количесвто дней
-
-    out_3.innerHTML = trueCount * 2000 * selectValue + "р"; //сумма
-  }
-}); //swiper
 
 var swiper = new Swiper('.swiper', {
   loop: true,
