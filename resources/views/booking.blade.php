@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
-    <a href="/">На главную</a> <br>
 
     {{-- Для вывода ошибок валидации --}}
     @if ($errors->any())
@@ -59,13 +58,13 @@
             <div class="item item_5">
                 <label for="countRooms">Выберите количество номеров</label>
             </div>
-            <div class="item" name="countRooms" id="countRooms">
-                {{-- <select name="rooms" id="countRooms">
-                    <option value="1 номер">1 номер</option>
-                    <option value="2 номера">2 номера</option>
-                    <option value="3 номера">3 номера</option>
-                </select> --}}
-                <input type="text" name="countRooms" id="countRooms" placeholder="countRooms">
+            <div class="item">
+                <select name="countRooms" id="countRooms">
+                    <option value="1">1 номер</option>
+                    <option value="2">2 номера</option>
+                    <option value="3">3 номера</option>
+                </select>
+                {{-- <input type="checkbox" name="countRooms" id="countRooms" placeholder="countRooms"> --}}
             </div>
             
 
@@ -102,7 +101,10 @@
 
             <button type="submit" class="button bookingSubmit">Забронировать</button>
         </div>
-    </form>
+    </form> <br>
+
+        <a href="/" style="text-decoration: none; color:green; font-size:1.2em">&#128072 на главную</a>
+
 
     <script src="js/calendar.js"></script>
 </body>
