@@ -2075,18 +2075,13 @@ var swiper = new Swiper('.swiper', {
   }
 }); //scrolling
 // calendar
-
-var btnCalendar = document.querySelector('.buttonCalendar');
-var calendarElement = document.querySelector(".calendar");
-
-function bookingClick() {
-  calendarElement.scrollIntoView({
-    block: "center",
-    behavior: "smooth"
-  });
-}
-
-btnCalendar.addEventListener('click', bookingClick); // rooms
+// let btnCalendar = document.querySelector('.buttonCalendar');
+// let calendarElement = document.querySelector(".calendar");
+// function bookingClick() {
+//     calendarElement.scrollIntoView({ block: "center", behavior: "smooth" });
+// }
+// btnCalendar.addEventListener('click', bookingClick);
+// rooms
 
 var btnRooms = document.querySelector('.buttonRooms');
 var roomsElement = document.querySelector(".roomsDescription");

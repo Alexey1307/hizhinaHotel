@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <a href="/">На главную</a> <br>
 
     {{-- Для вывода ошибок валидации --}}
     @if ($errors->any())
@@ -18,7 +19,6 @@
 
     <form action="/booking/submit" method="POST" class="calendarWrapper">
         @csrf
-        <a name="calendar" class="scroll"></a>
         <div class="calendar">
 
             <div class="item">
@@ -104,6 +104,6 @@
         </div>
     </form>
 
-    <script src="js/app.js"></script>
+    <script src="js/calendar.js"></script>
 </body>
 </html>

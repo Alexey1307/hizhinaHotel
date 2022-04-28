@@ -69,6 +69,11 @@ header {
     cursor: pointer;
 }
 
+.mainMenu a:hover {
+    color: orange;
+    cursor: pointer;
+}
+
 @media (max-width: 780px) {
     header {
         grid-column: 1/3;

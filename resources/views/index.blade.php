@@ -18,7 +18,7 @@
             </div>
             <div class="rightSide">
                 <div class="mainMenu">
-                    <button class="buttonCalendar">Бронирование</button>
+                    <a href="/booking" style="text-decoration: none">Бронирование</a>
                     <button class="buttonRooms">Наши номера</button>
                     <button class="buttonMaps">Как проехать</button>
                     <button class="buttonContact">Контакты</button>
@@ -34,98 +34,13 @@
                 Пролетите на троллее над ущельем Мишоко!<br>
                 Покатайтесь на лошадях и исследуйте Азишскую пещеру!</p>
     </div>
-    <form action="/booking/submit" method="POST" class="calendarWrapper">
-        @csrf
-        <a name="calendar" class="scroll"></a>
-        <div class="calendar">
-
-            <div class="item">
-                <label for="name">Ваше имя</label>
-            </div>
-            <div class="item">
-                <input type="text" name="name" id="name" placeholder="ФИО">
-            </div>
-            
-            <div class="item">
-                <label for="phone">Номер телефона</label>
-            </div>
-            <div class="item">
-                <input type="text" name="phone" id="phone" placeholder="Телефон">
-            </div>
-            
-            <div class="item">
-                <label for="email">Электронная почта (при наличии)</label>
-            </div>
-            <div class="item">
-                <input type="text" name="email" id="email" placeholder="Email">
-            </div>
-            
-            <div class="item">
-                <label for="enterDate">Дата заезда</label>
-            </div>
-            <div class="item">
-                <input class="start_date" type="date" name="enterDate" id="enterDate">
-            </div>
-
-            <div class="item">
-                <label for="outDate">Дата выезда</label>
-            </div>
-            <div class="item">
-                <input class="end_date" type="date" name="outDate" id="outDate">
-            </div>
-
-            <div class="item item_5">
-                <label for="countRooms">Выберите количество номеров</label>
-            </div>
-            <div class="item" name="countRooms" id="countRooms">
-                {{-- <select name="rooms" id="countRooms">
-                    <option value="1 номер">1 номер</option>
-                    <option value="2 номера">2 номера</option>
-                    <option value="3 номера">3 номера</option>
-                </select> --}}
-                <input type="text" name="countRooms" id="countRooms" placeholder="countRooms">
-            </div>
-            
-
-            <div class="item">
-                <label for="guestComments">Коментарий к бронированию</label>
-            </div>
-            <div class="item">
-                <textarea name="guestComments" id="guestComments" cols="30" rows="9" placeholder="Здесь вы можете указать время прибытия, обозначить необходимость дополнительного места для ребенка, или рассказать о вашем питомце которого вы бы хотели взять с собой!"></textarea>
-            </div>
-
-            <div class="item">
-                <label for="prepayment">Сумма предоплаты.</label>
-            </div>
-            <div class="item">
-                <textarea name="prepayment" id="prepayment" cols="30" rows="4" placeholder="Вы можете внести предоплату от 1000р, или оплатить бронирвание полностью."></textarea>
-            </div>
-
-            <div class="item">
-                <label for="payment">Остаток к оплате при заселении</label>
-            </div>
-            <div class="item">
-                <input type="text" name="payment" id="payment">
-                <div class="item out_3"><output name="payment" id="payment"></output></div>
-            </div>
-
-            <div class="item">Даты:</div>
-            <div class="item out"><output></output></div>
-
-            <div class="item">Количество ночей:</div>
-            <div class="item out_2"><output></output></div>
-
-            <div class="item">Сумма</div>
-            <div class="item out_3"><output></output></div>
-
-            <button type="submit" class="button bookingSubmit">Забронировать</button>
-        </div>
-    </form>
         
     <div class="price">
-        <span>Бронируйте отдых от 2000 &#8381</span>
+        <span>Номера от 2000 &#8381 &#128071</span>
     </div>
 
+    <a href="/booking" class="button" style="text-decoration:none; 
+    padding: 1rem 1.5rem; border-radius: 3px; color:yellow">ЗАБРОНИРОВАТЬ</a>
 
     <div class="roomsDescription">
         наши номера
@@ -185,6 +100,14 @@
     <div class="swiper" id="rewievs">
         <div class="swiper-wrapper">
             <div class="swiper-slide">
+                Хотелось бы отдельно отметить гостеприимство Алексея, его подсказки по местам посещения. Что касается самого места
+                проживания. Сам гостевой дом новый, располагается в тихом месте, до кафе минут 10 ходьбы, магазин в 5, Пятерочка в
+                минутах 15 через парк. Номер чистый, комфортный,удобная двуспальная кровать, в номере тепло, также присутствует
+                конвектор(его не включали, и так тепло было), просторный балконом, сантехника вся работает, проблем с горячей водой не
+                было. На улице есть беседка и мангальная зона. Отличное соотношение цена/качество. <br><br>
+                Евгений. Booking.com
+            </div>
+            <div class="swiper-slide">
                 Очень комфортные, уютные номера. Везде чистота и порядок. Хозяева всегда на связи. <br><br>
                 Оксана. Booking.com
             </div>
@@ -204,14 +127,6 @@
                 Спасибо Алексею за гостеприимство! Отличное место. Номер чистый , удобный , тёплый. Уютный дворик с беседкой и мангалом.
                 Особая благодарность Баксу))) ты настоящий талисман этого места)! <br><br>
                 Николай. Booking.com
-            </div>
-            <div class="swiper-slide">
-                Хотелось бы отдельно отметить гостеприимство Алексея, его подсказки по местам посещения. Что касается самого места
-                проживания. Сам гостевой дом новый, располагается в тихом месте, до кафе минут 10 ходьбы, магазин в 5, Пятерочка в
-                минутах 15 через парк. Номер чистый, комфортный,удобная двуспальная кровать, в номере тепло, также присутствует
-                конвектор(его не включали, и так тепло было), просторный балконом, сантехника вся работает, проблем с горячей водой не
-                было. На улице есть беседка и мангальная зона. Отличное соотношение цена/качество. <br><br>
-                Евгений. Booking.com
             </div>
             <div class="swiper-slide">
                 Удобное месторасположение, часть достопримечательностей находится вблизи от отеля, часть в 30 минутах езды, в номерах
@@ -275,7 +190,7 @@
         <div class="swiper-pagination"></div>
     </div>
 
-    <div class="mapsDescription">Как добраться</div>
+    <div class="mapsDescription">Как добраться &#128071</div>
     <div class="maps">
         <div><a class="socialNet" href="https://yandex.ru/maps/-/CCUFE4uoHA">Yandex карты</a></div>
         <div><a class="socialNet" href="https://goo.gl/maps/U7ub8dpT1CnPjMT17">Google карты</a></div>

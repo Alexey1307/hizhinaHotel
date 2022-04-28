@@ -27,8 +27,7 @@ class BookingRequest extends FormRequest
     {
         return [
             'name' => 'required',
-            'phone' => 'required|min:11',
-            'email' => 'email',
+            'phone' => 'required|min:5',
             'outDate' => 'after:enterDate'
         ];
     }
@@ -36,9 +35,9 @@ class BookingRequest extends FormRequest
 // Изменение сообщений о непрохождении валидации.
     public function messages(){
         return [
+            'name.required' => 'Не указано имя.',
             'phone.required' => 'Не указан номер телефона.',
-            'phone.min' => 'Номер телефон должен состоять не менее, чем из 11 символов.',
-            'email.email' => 'Электронная почта должна быть действительным адресом электронной почты.',
+            'phone.min' => 'Номер телефон должен быть настоящим.',
             'outDate.after' => 'Дата выезда должна быть позднее даты въезда.'
         ];
     }
