@@ -86,7 +86,7 @@
                 <label for="payment">Остаток к оплате при заселении</label>
             </div>
             <div class="item">
-                <input type="text" name="payment" id="payment">
+                {{-- <input type="text" name="payment" id="payment"> --}}
                 <div class="item out_3"><output name="payment" id="payment"></output></div>
             </div>
 
