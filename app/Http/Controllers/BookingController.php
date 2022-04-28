@@ -24,6 +24,6 @@ class BookingController extends Controller{
 
         $booking->save();
 
-        return redirect()->route('messages');
+        return view('messages');
     }
 }

@@ -22,11 +22,11 @@
     </div>
     <div class="formWrapper">
         <label for="enterDate">enterDate</label><br>
-        <input type="date" name="enterDate" id="enterDate""><br><br>
+        <input type="date" name="enterDate" id="enterDate"><br><br>
     </div>
     <div class="formWrapper">
         <label for="outDate">outDate</label><br>
-        <input type="date" name="outDate" id="outDate""><br><br>
+        <input type="date" name="outDate" id="outDate"><br><br>
     </div>
     <div class="formWrapper">
         <label for="countRooms">countRooms</label><br>

@@ -22,7 +22,7 @@ class CreateBookingsTable extends Migration
 
             $table->date('enterDate');
             $table->date('outDate');
-            $table->integer('countRooms');
+            $table->string('countRooms');
             $table->text('guestComments');
 
             $table->integer('prepayment'); // предоплата

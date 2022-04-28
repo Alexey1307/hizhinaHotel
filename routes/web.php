@@ -22,12 +22,4 @@ Route::get('/booking', function () {
 });
 
 Route::post('booking/submit',
-'App\Http\Controllers\BookingController@bookingRoom'); //имя контроллера@имя функции
-
-Route::get('/messages', function () {
-    return view('messages');
-});
-
-Route::get('123', function (){
-    return redirect ('messages');
-});
+'App\Http\Controllers\BookingController@bookingRoom');

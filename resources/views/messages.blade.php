@@ -7,7 +7,7 @@
     <title>Done</title>
 </head>
 <body>
-    <a href="">На главную</a>
+    <a href="/">На главную</a>
     <div class="messages">
         <h1 style="color: green">Бронирование завершено успешно!</h1>
         <h2 style="color: red">Просим оставаться на местах до даты выезда на отдых!</h2>
