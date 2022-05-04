@@ -185,6 +185,7 @@ header {
     justify-content: center;
     align-content: center;
     justify-self: center;
+    color: darkslategrey;
 }
 
 .button {

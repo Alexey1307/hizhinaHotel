@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/app.css">
 </head>
 <body>
+    <a href="/" style="text-decoration: none; color:green; font-size:1.2em">&#128072 на главную</a> <br><br>
 
     {{-- Для вывода ошибок валидации --}}
     @if ($errors->any())
@@ -20,10 +21,10 @@
         @csrf
         <div class="calendar">
 
-            <div class="item">
+            <div class="item" style="padding-top: 1em">
                 <label for="name">Ваше имя</label>
             </div>
-            <div class="item">
+            <div class="item" style="padding-top: 1em">
                 <input type="text" name="name" id="name" placeholder="ФИО">
             </div>
             
@@ -64,9 +65,14 @@
                     <option value="2">2 номера</option>
                     <option value="3">3 номера</option>
                 </select>
-                {{-- <input type="checkbox" name="countRooms" id="countRooms" placeholder="countRooms"> --}}
             </div>
-            
+
+            <div class="item">
+                <label for="prepayment">Сумма предоплаты.</label>
+            </div>
+            <div class="item">
+                <input type="number" name="prepayment" id="prepayment">
+            </div>
 
             <div class="item">
                 <label for="guestComments">Коментарий к бронированию</label>
@@ -75,36 +81,22 @@
                 <textarea name="guestComments" id="guestComments" cols="30" rows="9" placeholder="Здесь вы можете указать время прибытия, обозначить необходимость дополнительного места для ребенка, или рассказать о вашем питомце которого вы бы хотели взять с собой!"></textarea>
             </div>
 
-            <div class="item">
-                <label for="prepayment">Сумма предоплаты.</label>
-            </div>
-            <div class="item">
-                <textarea name="prepayment" id="prepayment" cols="30" rows="4" placeholder="Вы можете внести предоплату от 1000р, или оплатить бронирвание полностью."></textarea>
-            </div>
-
-            <div class="item">
-                <label for="payment">Остаток к оплате при заселении</label>
-            </div>
-            <div class="item">
-                {{-- <input type="text" name="payment" id="payment"> --}}
-                <div class="item out_3"><output name="payment" id="payment"></output></div>
-            </div>
-
-            <div class="item">Даты:</div>
+            {{-- <div class="item">Даты:</div>
             <div class="item out"><output></output></div>
 
             <div class="item">Количество ночей:</div>
-            <div class="item out_2"><output></output></div>
+            <div class="item out_2"><output></output></div> --}}
 
-            <div class="item">Сумма</div>
-            <div class="item out_3"><output></output></div>
+            <div class="item">
+                <label for="payment">Остаток к оплате при заселении:</label>
+            </div>
+            <div class="item out_3" style="color: green; font-size:2em; bacground-color:red"><output name="payment" id="payment"></output></div>
+            
 
-            <button type="submit" class="button bookingSubmit">Забронировать</button>
+            <button type="submit" class="bookingSubmit button">Забронировать</button>
+            
         </div>
-    </form> <br>
-
-        <a href="/" style="text-decoration: none; color:green; font-size:1.2em">&#128072 на главную</a>
-
+    </form>
 
     <script src="js/calendar.js"></script>
 </body>
