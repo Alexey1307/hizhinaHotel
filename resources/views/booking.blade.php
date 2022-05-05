@@ -71,14 +71,15 @@
                 <label for="prepayment">Сумма предоплаты.</label>
             </div>
             <div class="item">
-                <input type="number" name="prepayment" id="prepayment">
+                <input type="number" name="prepayment" id="prepayment" placeholder="Введите сумму">
             </div>
 
             <div class="item">
                 <label for="guestComments">Коментарий к бронированию</label>
             </div>
-            <div class="item">
-                <textarea name="guestComments" id="guestComments" cols="30" rows="9" placeholder="Здесь вы можете указать время прибытия, обозначить необходимость дополнительного места для ребенка, или рассказать о вашем питомце которого вы бы хотели взять с собой!"></textarea>
+            <div class="item" style="padding-right: 2px">
+                <textarea name="guestComments" id="guestComments" cols="30" rows="9" 
+                placeholder="Коментарий к бронированию"></textarea>
             </div>
 
             {{-- <div class="item">Даты:</div>
@@ -90,8 +91,9 @@
             <div class="item">
                 <label for="payment">Остаток к оплате при заселении:</label>
             </div>
-            <div class="item out_3" style="color: green; font-size:2em; bacground-color:red"><output name="payment" id="payment"></output></div>
-            
+            <div class="item out_3" style="color: green; font-size:2em; bacground-color:red">
+                <output name="payment" id="payment"></output>
+            </div>
 
             <button type="submit" class="bookingSubmit button">Забронировать</button>
             

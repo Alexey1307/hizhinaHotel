@@ -22,4 +22,7 @@ Route::get('/booking', function () {
 });
 
 Route::post('booking/submit',
-'App\Http\Controllers\BookingController@bookingRoom');
+'App\Http\Controllers\BookingController@submit');
+
+Route::get('allData',
+'App\Http\Controllers\BookingController@allData')->name('all_data');

@@ -17,13 +17,6 @@ const swiper = new Swiper('.swiper', {
 });
 
 //scrolling
-// calendar
-// let btnCalendar = document.querySelector('.buttonCalendar');
-// let calendarElement = document.querySelector(".calendar");
-// function bookingClick() {
-//     calendarElement.scrollIntoView({ block: "center", behavior: "smooth" });
-// }
-// btnCalendar.addEventListener('click', bookingClick);
 
 // rooms
 let btnRooms = document.querySelector('.buttonRooms');

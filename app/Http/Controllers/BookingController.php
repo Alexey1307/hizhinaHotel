@@ -8,7 +8,7 @@ use App\Http\Requests\BookingRequest;
 
 class BookingController extends Controller{
 
-    public function bookingRoom(BookingRequest $req){
+    public function submit(BookingRequest $req){
         $booking = new Booking();
         $booking->name = $req->input('name');
         $booking->phone = $req->input('phone');
@@ -25,5 +25,11 @@ class BookingController extends Controller{
         $booking->save();
 
         return view('messages');
+    }
+
+    public function allData()
+    {
+        // dd(Booking::all());
+        return view('allData', ['data' => Booking::all()]);
     }
 }

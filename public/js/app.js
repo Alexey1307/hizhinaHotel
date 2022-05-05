@@ -2074,13 +2074,6 @@ var swiper = new Swiper('.swiper', {
     clickable: true
   }
 }); //scrolling
-// calendar
-// let btnCalendar = document.querySelector('.buttonCalendar');
-// let calendarElement = document.querySelector(".calendar");
-// function bookingClick() {
-//     calendarElement.scrollIntoView({ block: "center", behavior: "smooth" });
-// }
-// btnCalendar.addEventListener('click', bookingClick);
 // rooms
 
 var btnRooms = document.querySelector('.buttonRooms');
