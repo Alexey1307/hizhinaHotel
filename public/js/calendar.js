@@ -27,5 +27,7 @@ document.querySelector('form').addEventListener('input', function () {
         let trueCount = count - 1;
         // out_2.innerHTML = `${trueCount}`; //количесвто дней
         out_3.innerHTML = (trueCount * 2000 * selectValue) - Number(prepayment.value) + "р"; //сумма
+        let inp = document.querySelector('.inp');
+        inp.value = (trueCount * 2000 * selectValue) - Number(prepayment.value);
     }
 });

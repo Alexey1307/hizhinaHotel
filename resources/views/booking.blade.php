@@ -91,9 +91,10 @@
             <div class="item">
                 <label for="payment">Остаток к оплате при заселении:</label>
             </div>
-            <div class="item out_3" style="color: green; font-size:2em; bacground-color:red">
-                <output name="payment" id="payment"></output>
+            <div class="item" style="color: green; font-size:2em; bacground-color:red">
+                <input class="item inp out_3" type="text" name="payment" id="payment">
             </div>
+            
 
             <button type="submit" class="bookingSubmit button">Забронировать</button>
             
