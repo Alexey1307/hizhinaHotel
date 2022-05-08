@@ -27,9 +27,18 @@ class BookingController extends Controller{
         return view('messages');
     }
 
+
+    //УБЕРИ ЭТО ПЕРЕД ПРОДАКШЕНОМ!!! УТЕЧКА БАЗЫ ДАННЫХ!!!
     public function allData()
     {
-        // dd(Booking::all());
         return view('allData', ['data' => Booking::all()]);
+        // return view('allData', ['data' => [Booking::find(1)]]); //find - метод для поиска записи из БД по ID.
+        // return view('allData', ['data' => Booking::where('name', '=', 'Алексей')->get()]); //ищем по параметрам
+
+    }
+
+    public function oneData($id)
+    {
+        return view('oneData', ['data' => Booking::find($id)]);
     }
 }

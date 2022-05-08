@@ -1,6 +1,9 @@
 
 @foreach ($data as $item)
     <div>
+         <h3>Id: 
+            <span style="color: green">{{ $item->id }}</span>
+        </h3>
         <h3>Имя: 
             <span style="color: green">{{ $item->name }}</span>
         </h3>
@@ -28,4 +31,6 @@
         <h3>Остаток к оплате: <span style="color: green">{{ $item->payment }}</span>
         </h3>
     </div>
+    <a href=" {{ route('one_data', $item->id) }} "><button>Детальнее</button></a>
 @endforeach
+

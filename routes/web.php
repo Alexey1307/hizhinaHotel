@@ -25,4 +25,7 @@ Route::post('booking/submit',
 'App\Http\Controllers\BookingController@submit');
 
 Route::get('allData',
-'App\Http\Controllers\BookingController@allData')->name('all_data');
+'App\Http\Controllers\BookingController@allData')->name('all_data_');
+
+Route::get('allData/{id}',
+'App\Http\Controllers\BookingController@oneData')->name('one_data');
