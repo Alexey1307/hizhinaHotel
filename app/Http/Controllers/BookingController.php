@@ -28,7 +28,7 @@ class BookingController extends Controller{
     }
 
 
-    //УБЕРИ ЭТО ПЕРЕД ПРОДАКШЕНОМ!!! УТЕЧКА БАЗЫ ДАННЫХ!!!
+    //УБЕРИ ЭТО ПЕРЕД ПРОДАКШЕНОМ!!! УТЕЧКА БАЗЫ ДАННЫХ!!! или в админку
     public function allData()
     {
         return view('allData', ['data' => Booking::all()]);
