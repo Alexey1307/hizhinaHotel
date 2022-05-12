@@ -20,7 +20,8 @@
     </div>
 @endforeach
 
-<h1>Хижина</h1>
+<hr>
+<h1 style="font-style:italic">Хижина</h1>
     <a href="tel:89184289606">8-918-428-96-06</a><br><br>
     <a href="https://t.me/hizhinaHotel" style="padding-right: 2em">Telegram</a>
     <a href="https://vk.com/club210847892">VK</a
