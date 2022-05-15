@@ -31,3 +31,7 @@ Route::get('allData/{id}',
 'App\Http\Controllers\BookingController@oneData')->name('one_data');
 
 Route::get('send','App\Http\Controllers\mailController@send');
+
+Route::get('/learnPHP', function () {
+    return view('learnPHP');
+});

@@ -3,6 +3,9 @@
 
 @foreach ($data as $item)
     <div>
+        <h3>Имя: 
+            <span style="color: green">{{ $item->name }}</span>
+        </h3>
         <h3>Дата заезда: 
             <span style="color: green">{{ $item->enterDate }}</span>
         </h3>
