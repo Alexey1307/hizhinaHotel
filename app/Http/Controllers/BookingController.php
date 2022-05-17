@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Booking;
 use App\Http\Requests\BookingRequest;
+use Mail;
 
 class BookingController extends Controller{
 
@@ -23,6 +24,12 @@ class BookingController extends Controller{
         $booking->payment = $req->input('payment');
 
         $booking->save();
+
+        Mail::send('mail', ['data' => [Booking::all()->last()]], function($message){
+            $message->to('hizhinaHotel@yandex.ru', 'Дорогому гостю')->subject('Бронирование')
+            ->cc('hizhinaHotel@yandex.ru',)->subject('Бронирование');
+            $message->from('hizhinaHotel@yandex.ru', 'Хижина');
+        });
 
         return view('messages');
     }
