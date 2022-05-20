@@ -1,26 +1,44 @@
 <?php
 
-$arr = [1, 2, 3, 499,];
+$arr = [10, 2, 3, 499,];
 $arr_2 = [0 => 'blue', 1 => 'red', 2 => 'green', 3 => 'red'];
 echo '<pre>';
  print_r($arr);
 echo '<pre>';
 
-
-echo array_key_last($arr); //выводим ИНДЕКС последнего элемента массива
+//Находим последний элемент массваи и его индекс.
+echo 'Индекс последнего элемента = ';
+echo array_key_last($arr);
 echo '<pre>';
-echo $x = $arr[array_key_last($arr)];
+echo 'Значение последнего элемента = ';
+echo $arr[array_key_last($arr)];
 echo '<pre>';
 
-if (in_array('0', $arr_2)) {
-    echo 'done';
-}
+//Находим минимальный и максимальный элемент массива
+$min = min($arr);
+$max = max($arr);
+echo 'Миниммальный элемент массива - ';
+echo $min;
+echo '<pre>';
+echo 'Максимальный элемент массива - ';
+echo $max;
+echo '<pre>';
+echo 'Длина массива - ';
+echo count($arr);
+echo '<pre>';
 
-else {
-    echo 'nope';
-}
+//Алгоритмы. Сортировка выбором.
+$min = min($arr);
+$arr_2 = [];
+    foreach ($arr as $key => $value) {
+        if ($value = $min) {
+            $arr_2[] = $value;
+            unset($arr[$key]);
 
-
-
+            
+        }
+        print_r ($arr_2);
+    }
+    print_r($arr);
 
 ?>
