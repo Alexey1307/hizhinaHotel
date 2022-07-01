@@ -31,6 +31,6 @@ Route::get('allData',
 Route::get('allData/{id}',
 'App\Http\Controllers\BookingController@oneData')->name('one_data');
 
-Route::get('/learnPHP', function () {
-    return view('learnPHP');
+Route::get('/calendar', function () {
+    return view('calendar');
 });

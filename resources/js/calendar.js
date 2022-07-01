@@ -5,8 +5,6 @@ document.querySelector('form').addEventListener('input', function () {
     dateStart = Date.parse(dateStart);
     dateEnd = Date.parse(dateEnd);
 
-    // let out = document.querySelector('.out');
-    // let out_2 = document.querySelector('.out_2');
     let out_3 = document.querySelector('.out_3');
     let count = 0;
     let select = document.querySelector('select').selectedIndex;

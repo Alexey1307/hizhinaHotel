@@ -2111,6 +2111,34 @@ function contactClick() {
 }
 
 btnContact.addEventListener('click', contactClick);
+var colors = {
+  '3': 'green',
+  '2': 'green',
+  '1': 'green',
+  '0': 'red'
+};
+
+var setColor = function setColor(input) {
+  var value = input.value;
+
+  if (colors.hasOwnProperty(value)) {
+    input.style.backgroundColor = colors[value];
+  }
+};
+
+var onInput = function onInput(e) {
+  setColor(e.target);
+};
+
+var rooms = document.querySelectorAll('.input');
+rooms.forEach(function (elem) {
+  elem.addEventListener('input', onInput);
+  setColor(elem);
+});
+var days = document.querySelectorAll('.items');
+days.forEach(function (elem) {
+  elem.style.backgroundColor = 'orange';
+});
 
 /***/ }),
 
