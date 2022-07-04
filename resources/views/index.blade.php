@@ -36,7 +36,7 @@
     </div>
         
     <div class="price">
-        <span>Номера от 2000 &#8381 &#128071</span>
+        <span>Номера от 2500 &#8381 &#128071</span>
     </div>
 
     <a href="/booking" class="button" style="text-decoration:none; 

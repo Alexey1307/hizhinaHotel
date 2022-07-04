@@ -41,7 +41,8 @@
             <div class="item">
                 <input type="text" name="email" id="email" placeholder="Email">
             </div>
-            
+            <button class="test">Выбрать даты</button>
+            <div></div>
             <div class="item">
                 <label for="enterDate">Дата заезда</label>
             </div>
@@ -102,5 +103,6 @@
     </form>
 
     <script src="js/calendar.js"></script>
+    <script src="js/createCalendar.js"></script>
 </body>
 </html>
