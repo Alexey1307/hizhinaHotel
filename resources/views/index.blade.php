@@ -39,7 +39,7 @@
         <span>Номера от 2500 &#8381 &#128071</span>
     </div>
 
-    <a href="/booking" class="button" style="text-decoration:none; 
+    <a href="/calendar" class="button" style="text-decoration:none; 
     padding: 1rem 1.5rem; border-radius: 3px; color:yellow">ЗАБРОНИРОВАТЬ</a>
 
     <div class="roomsDescription">
