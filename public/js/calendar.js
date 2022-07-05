@@ -17,6 +17,8 @@ document.querySelector('form').addEventListener('input', function () {
 
     const startDateRender = new Date(dateStart).toLocaleDateString().substring(0, 10);
     const endDateRender = new Date(dateEnd).toLocaleDateString().substring(0, 10);
+    console.log(startDateRender);
+    console.log(endDateRender);
 
     // if (startDateRender && endDateRender != 'Invalid Da') {
     //     out.innerHTML = startDateRender + ' - ' + endDateRender; //Выводим выбранные даты

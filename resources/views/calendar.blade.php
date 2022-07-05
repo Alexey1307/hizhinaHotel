@@ -22,6 +22,8 @@
     padding: 1rem 1.5rem; border-radius: 3px">ПЕРЕЙТИ К ОФОРМЛЕНИЮ</a>
     
 
+	<div class="showDay"></div>
+
 <script src="js/createCalendar.js"></script>
 </body>
 </html>

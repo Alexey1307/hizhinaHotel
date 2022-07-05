@@ -6,6 +6,8 @@ let years = document.querySelector('.years');
 let curentDate = new Date();
 let curentYear = curentDate.getFullYear();
 let curentMonth = curentDate.getMonth();
+let d = new Date();
+let arr = [];
 
 function createCalendar(elem, year, month) {
     let mon = month;
@@ -34,14 +36,20 @@ function createCalendar(elem, year, month) {
 
     // <td> ячейки календаря с датами
     while (d.getMonth() == mon) {
-        table += '<td>' + d.getDate() + input + '</td>';
-
-        if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
-            table += '</tr><tr>';
-        }
-
+        let findDay = d.getDate();
+        table += '<td>' + findDay + input + '</td>';
+            if (getDay(d) % 7 == 6) { // вс, последний день - перевод строки
+                table += '</tr><tr>';
+            }
         d.setDate(d.getDate() + 1);
+
+
+        console.log(findDay); // БИНГО!!!!!!! - получил массив дней теперь подумай как его
+        let showDay = document.querySelector('.showDay');
+        showDay.innerHTML = findDay;
+        console.log(typeof findDay);
     }
+
 
     // добить таблицу пустыми ячейками, если нужно
     // 29 30 31 * * * *
@@ -55,6 +63,8 @@ function createCalendar(elem, year, month) {
     table += '</tr></table>';
 
     elem.innerHTML = table;
+
+    
 }
 
 function getDay(date) {
@@ -114,7 +124,9 @@ function switchMounth() {
 
 switchMounth();
 
-//colors part
+
+
+// ***Colors part***
 
 const colors = {
     '3': 'green',
@@ -139,3 +151,10 @@ rooms.forEach(elem => {
     elem.addEventListener('input', onInput);
     setColor(elem);
 });
+
+
+// ***Choice part***
+
+
+
+
