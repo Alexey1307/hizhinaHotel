@@ -43,22 +43,11 @@ function createCalendar(elem, year, month) {
                 table += '</tr><tr>';
             }
         d.setDate(d.getDate() + 1);
-
-
-  
-//неудачная попытка сформирвать массив
-        let arr = [];
-        arr.push(findDay);
-
-//неудачная попытка отловить событие
- ;
-
-        // console.log(arr);
-        // console.log(typeof arr);
     }
 
+
     calendar.addEventListener("click", function (e) {
-        console.log(event.target.innerText);
+        console.log(e.target.innerText);
     })
 
     // добить таблицу пустыми ячейками, если нужно
