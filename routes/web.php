@@ -26,10 +26,10 @@ Route::post('booking/submit',
 
 
 Route::get('allData',
-'App\Http\Controllers\BookingController@allData')->name('all_data_');
+'BookingController@allData')->name('all_data_');
 
 Route::get('allData/{id}',
-'App\Http\Controllers\BookingController@oneData')->name('one_data');
+'BookingController@oneData')->name('one_data');
 
 Route::get('/calendar', function () {
     return view('calendar');
