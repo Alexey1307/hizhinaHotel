@@ -7,18 +7,19 @@ let curentDate = new Date();
 let curentYear = curentDate.getFullYear();
 let curentMonth = curentDate.getMonth();
 let d = new Date();
-let arr = [];
 
 function createCalendar(elem, year, month) {
     let mon = month;
     let d = new Date(year, mon);
 
+    //прописываем год на старнице
     for (let i = 0; i <= curentYear; i++) {
         if (i == curentYear) {
             years.innerHTML = curentYear;
         }
     }
 
+    //прописывавем месяц на странице
     for (let i = 0; i <= monthsName.length; i++) {
         if (i == curentMonth) {
             months.innerHTML = monthsName[i];
@@ -44,12 +45,21 @@ function createCalendar(elem, year, month) {
         d.setDate(d.getDate() + 1);
 
 
-        console.log(findDay); // БИНГО!!!!!!! - получил массив дней теперь подумай как его
-        let showDay = document.querySelector('.showDay');
-        showDay.innerHTML = findDay;
-        console.log(typeof findDay);
+  
+//неудачная попытка сформирвать массив
+        let arr = [];
+        arr.push(findDay);
+
+//неудачная попытка отловить событие
+ ;
+
+        // console.log(arr);
+        // console.log(typeof arr);
     }
 
+    calendar.addEventListener("click", function (e) {
+        console.log(event.target.innerText);
+    })
 
     // добить таблицу пустыми ячейками, если нужно
     // 29 30 31 * * * *
