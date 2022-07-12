@@ -45,11 +45,6 @@ function createCalendar(elem, year, month) {
         d.setDate(d.getDate() + 1);
     }
 
-
-    calendar.addEventListener("click", function (e) {
-        console.log(e.target.innerText);
-    })
-
     // добить таблицу пустыми ячейками, если нужно
     // 29 30 31 * * * *
     if (getDay(d) != 0) {
@@ -60,10 +55,7 @@ function createCalendar(elem, year, month) {
 
     // закрыть таблицу
     table += '</tr></table>';
-
     elem.innerHTML = table;
-
-    
 }
 
 function getDay(date) {
@@ -124,7 +116,6 @@ function switchMounth() {
 switchMounth();
 
 
-
 // ***Colors part***
 
 const colors = {
@@ -152,8 +143,15 @@ rooms.forEach(elem => {
 });
 
 
-// ***Choice part***
 
+//Реализуем выбор дат
+function choiceDates() {
+    let arrDates = new Array();
+    calendar.addEventListener("click", (e) => {
+        arrDates.push(e.target.innerText);
+        console.log(arrDates);
 
+    });
+}
 
-
+choiceDates();
