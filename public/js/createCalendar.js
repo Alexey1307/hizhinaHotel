@@ -150,6 +150,8 @@ function choiceDates() {
     calendar.addEventListener("click", (e) => {
         arrDates.push(e.target.innerText);
         console.log(arrDates);
+        console.log('First - ' + arrDates[0]);
+        console.log('Last - ' + arrDates[arrDates.length-1]);
 
     });
 }
