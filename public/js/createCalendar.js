@@ -153,7 +153,7 @@ function choiceDates() {
     let lastDay;
     calendar.addEventListener("click", (e) => {
         if (e.target.innerText>=1){
-            arrDates.push(e.target.innerText + ' ' + curentMonth);
+            arrDates.push(e.target.innerText); // + curentMonth
             arr.push(e.target);
 
             firstDay = arrDates[0];
