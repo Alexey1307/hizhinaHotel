@@ -83,3 +83,7 @@ tr {
     box-shadow: 5px 5px 0 #3c354a;
     cursor: pointer;
 }
+
+.yellow{
+    background-color: yellow;
+}

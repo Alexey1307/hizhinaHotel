@@ -146,12 +146,32 @@ rooms.forEach(elem => {
 
 //Реализуем выбор дат
 function choiceDates() {
-    let arrDates = new Array();
+    let arrDates = [];
+    let arr = [];
+    let classList = document.body.classList;
+    let firstDay;
+    let lastDay;
     calendar.addEventListener("click", (e) => {
-        arrDates.push(e.target.innerText);
+        if (e.target.innerText>=1){
+            arrDates.push(e.target.innerText + ' ' + curentMonth);
+            arr.push(e.target);
+
+            firstDay = arrDates[0];
+            lastDay = arrDates[arrDates.length - 1];
+            // e.target.classList.toggle('yellow');
+            
+            // for(let i in arr){
+            //     arr[i].classList.add('yellow');
+            //     arr[arr.length - 1].classList.add('yellow');
+                
+            // }
+            
+            
+        }
         console.log(arrDates);
-        console.log('First - ' + arrDates[0]);
-        console.log('Last - ' + arrDates[arrDates.length-1]);
+        // console.log(arr);
+        // console.log('First - ' + firstDay);
+        // console.log('Last - ' + lastDay);
 
     });
 }
