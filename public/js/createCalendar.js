@@ -148,26 +148,27 @@ rooms.forEach(elem => {
 function choiceDates() {
     let arrDates = [];
     let arr = [];
+    let arr2 = [];
     let classList = document.body.classList;
     let firstDay;
     let lastDay;
     calendar.addEventListener("click", (e) => {
         if (e.target.innerText>=1){
             arrDates.push(e.target.innerText); // + curentMonth
-            firstDay = arrDates[0];
-            lastDay = arrDates[arrDates.length - 1];
-            arr.push(e.target);
+            firstDay = +arrDates[0];
+            lastDay = +arrDates[arrDates.length - 1];
+            
+            for(let i = firstDay; i<= lastDay; i++){
+                arr2.push(i);
+                
+            }
+            console.log(arr2);
+
+            
 
             e.target.classList.toggle('yellow');
-            for(let i in arr){
-                arr[i].classList.add('yellow');
-                arr[arr.length - 1].classList.add('yellow');
-            }
-            
-            
-        }
-        console.log(arrDates);
 
+        }
     });
 }
 
