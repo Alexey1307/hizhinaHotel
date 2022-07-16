@@ -154,24 +154,19 @@ function choiceDates() {
     calendar.addEventListener("click", (e) => {
         if (e.target.innerText>=1){
             arrDates.push(e.target.innerText); // + curentMonth
-            arr.push(e.target);
-
             firstDay = arrDates[0];
             lastDay = arrDates[arrDates.length - 1];
-            // e.target.classList.toggle('yellow');
-            
-            // for(let i in arr){
-            //     arr[i].classList.add('yellow');
-            //     arr[arr.length - 1].classList.add('yellow');
-                
-            // }
+            arr.push(e.target);
+
+            e.target.classList.toggle('yellow');
+            for(let i in arr){
+                arr[i].classList.add('yellow');
+                arr[arr.length - 1].classList.add('yellow');
+            }
             
             
         }
         console.log(arrDates);
-        // console.log(arr);
-        // console.log('First - ' + firstDay);
-        // console.log('Last - ' + lastDay);
 
     });
 }
