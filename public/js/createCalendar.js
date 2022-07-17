@@ -163,11 +163,7 @@ rooms.forEach((elem) => {
 
 //Реализуем выбор дат
 function choiceDates() {
-    let arrDates = [];
-    let arr = [];
     let classList = document.body.classList;
-    let firstDay;
-    let lastDay;
     calendar.addEventListener("click", (e) => {
         let tar = e.target;
         if (tar.nodeName === "TD") {
