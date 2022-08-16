@@ -169,6 +169,10 @@ function choiceDates() {
         if (tar.nodeName === "TD") {
             let selectDay = +tar.dataset.day;
 
+            //Вставка с Хабра
+            let currentMonth = curentDate.getMonth();
+            let choiceArr = [...choice];
+
             if (choice.size === 0 || choice.size > 1) {
                 [...document.querySelectorAll("td.yellow")].forEach((td) =>
                     td.classList.remove("yellow")
@@ -176,6 +180,12 @@ function choiceDates() {
                 choice = new Set();
                 choice.add(selectDay);
                 e.target.classList.add("yellow");
+                
+                //Вставка с Хабра
+                let object = {
+                    [choiceArr[0]]: currentMonth
+                }
+                console.log(object);
             } else if (choice.size === 1) {
                 let firstSelect = Math.min([...choice][0], selectDay);
                 let secondSelect = Math.max([...choice][0], selectDay);
@@ -184,11 +194,30 @@ function choiceDates() {
                         .querySelector(`td[data-day="${firstSelect + i}"]`)
                         .classList.add("yellow");
                     choice.add(firstSelect + i);
+
+                    //Вставка с Хабра
+                    object = {
+                        [choiceArr.at(-1)]: currentMonth
+                    }
                 }
             }
             console.log(choice);
         }
     });
 }
+
+//Решение с Хабра
+// Как добавить переменную так, чтоб получился новый объект, где ключом будет переменная currentMonth,
+// а значением первый и последний элемент set коллекции choice ? Или же наоборот переменная будет значением,
+// а элемент коллекции - ключом, в принципе порядок не важен.
+// let choice = new Set([1, 2, 3, 4]);
+// let choiceArr = [...choice];
+
+// let currentMonth = 1;
+
+// let object = {
+//     [choiceArr[0]]: currentMonth,
+//     [choiceArr.at(-1)]: currentMonth
+// }
 
 choiceDates();

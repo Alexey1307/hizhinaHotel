@@ -28,8 +28,8 @@ document.querySelector('form').addEventListener('input', function () {
         count++;
         let trueCount = count - 1;
         // out_2.innerHTML = `${trueCount}`; //количесвто дней
-        out_3.innerHTML = (trueCount * 2000 * selectValue) - Number(prepayment.value) + "р"; //сумма
+        out_3.innerHTML = (trueCount * 2500 * selectValue) - Number(prepayment.value) + "р"; //сумма
         let inp = document.querySelector('.inp');
-        inp.value = (trueCount * 2000 * selectValue) - Number(prepayment.value);
+        inp.value = (trueCount * 2500 * selectValue) - Number(prepayment.value);
     }
 });
